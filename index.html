@@ -2,6 +2,8 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="images/png" href="images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -14,21 +16,22 @@
           <a href="index.html"> <img src="#" alt="На главную"></a>
         </p>
         <ul class="navigation-list">
-          <li class="navigtion-item active">Главная</li>
-          <li class="navigtion-item">О Седоне</li>
-          <li class="navigtion-item">Гостиницы</li>
+          <li class="navigtion-item active"> <a></a>Главная</a></li>
+          <li class="navigtion-item"> <a href="#">О Седоне</a></li>
+          <li class="navigtion-item"> <a href="catalog.html">Гостиницы</a></li>
         </ul>
         <ul class="user-menu">
-          <li class="user-menu-item" id="search-button"> <button><img src="#" alt="Поиск"></button> </li>
-          <li class="user-menu-item" id="like-button"> <button><img src="#" alt="Избранное"></button> </li> <!-- Если не ошибаюсь, то счётчик добавляется на стадии JS-->
-          <li class="user-menu-item"> <button>ХОЧУ СЮДА!</button></li>
+          <li class="user-menu-item" id="search-button"> <button type="button"><a href="#"> <img src="#" alt="Поиск"></a></button> </li>
+          <li class="user-menu-item" id="like-button"> <button type="button"><a href="#"><img src="#" alt="Избранное"></a></button> </li> <!-- Если не ошибаюсь, то счётчик добавляется на стадии JS-->
+          <li class="user-menu-item"> <button type="button"><a href="#">ХОЧУ СЮДА!</a></button></li>
         </ul>
       </nav>
     </header>
 
     <main>
       <section class="hero">
-        <!-- <img id="hero-background" src="#" alt="Welcome to Sedona"> -->
+        <!-- <img id="hero-background" src="#" alt="Welcome to Sedona">  
+        не уверен на 100% что эта картинка чисто декоративная-->
         <p><img class="introdution img-top" src="#" alt="Welcome to the gorgeous"></p>
         <p><img class="introdution img-center" src="#" alt="SEDONA"></p>
         <p><img class="introdution img-bottom" src="#" alt="Because the Grand Canyon sucks"></p>
@@ -90,22 +93,40 @@
       <section class="hotel-search">
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <button>поиск гостиницы в Седоне</button>
+        <button type="button"> <a href="#"></a> поиск гостиницы в Седоне</button>
       </section>
       <section class="subscribe">
         <h2>Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form>
-          <input name="email" type="email" placeholder="Ваш e-mail">
-          <button>подписаться</button>
+        <form action="https://echo.htmlacademy.ru">
+          <input name="email" id="subscribe-button" type="email" placeholder="Ваш e-mail" required>
+          <button type="submit">подписаться</button>
         </form>
-      </section>
+              </section>
      </main>
      <footer>
       <ul class="social-list"> 
-        <li><a href="#"> <img src="#" alt="ВКонтакте"></a></li>
-        <li><a href="#"> <img src="#" alt="Telegram"></a></li>
-        <li><a href="#"> <img src="#" alt="YouTube"></a></li>
+        <li class="social-list-item">
+          <button type="button">
+            <a class="vk-icon" href="#">
+              <span class="visually-hidden"></span>
+            </a>
+          </button>
+          </li> 
+          <li class="social-list-item">
+            <button type="button">
+              <a class="tg-icon" href="#">
+               <span class="visually-hidden"></span>
+             </a>
+            </button>
+        </li> 
+        <li class="social-list-item">
+          <button type="button">
+            <a class="youtube-icon" href="#">
+               <span class="visually-hidden"></span>
+             </a>
+          </button>
+        </li> 
       </ul>
       <div class=phone><a href="tel:+78128121212">+7 (812) 812-12-12</a></div>
       <p> <a href="https://htmlacademy.ru/"> <img src="#" alt="htmlacademy.ru"></a></p>
