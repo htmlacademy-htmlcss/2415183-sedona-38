@@ -13,19 +13,19 @@
     <header class="main-header" data-test="header">
       <nav>
         <p class="logo">
-          <a href="index.html"> <img src="#" alt="На главную"></a>
+          <a href="index.html"><img src="#" alt="Логотип города Седона"></a>
         </p>
         <ul class="navigation-list">
-          <li class="navigtion-item"> <a a href="index.html"></a>Главная</a></li>
+          <li class="navigtion-item"> <a href="#">Главная</a></li>
           <li class="navigtion-item"> <a href="#">О Седоне</a></li>
-          <li class="navigtion-item  active"> <a>Гостиницы</a></li>
+          <li class="navigtion-item  active"> <a href="#">Гостиницы</a></li>
         </ul>
         <ul class="user-menu">
-          <li class="user-menu-item" id="search-button"> <button type="button"><a href="#"><img src="#" alt="Поиск"></a></button> </li>
-          <li class="user-menu-item" id="like-button"> <button type="button"><a href="#"><img src="#" alt="Избранное"></a></button> </li> <!-- Если не ошибаюсь, то счётчик добавляется на стадии JS-->
-          <li class="user-menu-item"> <button type="button"><a href="#">ХОЧУ СЮДА!</a></button></li>
-        </ul>
-      </nav>
+          <li class="user-menu-item" id="search-button"> <a href="#"></a> </li>
+          <li class="user-menu-item" id="like-button"> <a href="#">12</a> </li> 
+          </ul>
+          <a href="#">ХОЧУ СЮДА!</a>
+       </nav>
     </header>
     <main data-test="main">
         <section class="hero" data-test=" filter">
@@ -43,7 +43,7 @@
                         <li><input type="checkbox" name="hotel-options-list" id="parking" checked>
                             <label for="parking">Парковка</label> 
                         </li>
-                        <li><input type="checkbox" name="hotel-options-list" id="wi-fi" checked>
+                        <li><input type="checkbox" name="hotel-options-list" id="wi-fi">
                             <label for="wi-fi">Wi-Fi</label> 
                         </li>                
                     </ul>         
@@ -65,15 +65,13 @@
               <form action="https://echo.htmlacademy.ru/courses" method="post">
                 <h2>Стоимость, ₽:</h2>
                 <div class="price-select">
-                  <ul>
-                    <li>
-                      <input type="number" name="price-start" id="price-from" value="0">
+                  
                       <label for="price-from">от</label>
-                    </li>
-                    <li><input type="number" name="price-end" id="price-to" value="9000">
+                      <input type="number" name="price-start" id="price-from" value="0">
+                    
                       <label for="price-to">до</label>
-                    </li>
-                  </ul>
+                      <input type="number" name="price-end" id="price-to" value="9000">
+                   
                 </div>
                 <div class="price-slider">
                 <input type="range" min="0" max="9000" value="0" class="slider" id="price-slider">
@@ -81,8 +79,8 @@
               </form>
               <form>
                 <form action="https://echo.htmlacademy.ru/courses" method="post"> 
-                  <input type="submit" name="hotel-search-button" id="hotel-search-button" value="ПРИМЕНИТЬ">
-                  <input type="reset" name="hotel-search-reset" id="hotel-search-reset" value="CБРОСИТь">
+                  <input type="submit" name="hotel-search-button" id="hotel-search-button" value="Применить">
+                  <input type="reset" name="hotel-search-reset" id="hotel-search-reset" value="Сбросить">
               </form>
         </section>
         <section class="sorting-results" data-test="catalog">
@@ -180,39 +178,26 @@
           <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form action="https://echo.htmlacademy.ru">
             <input name="email" id="subscribe-button" type="email" placeholder="Ваш e-mail" required>
-            <button type="submit">подписаться</button>
+            <p><button type="submit">подписаться</button></p>
           </form>
-        </article>      
+        </article>
     </main>
-     <footer data-test="footer">
+    <footer data-test="footer">
       <ul class="social-list"> 
         <li class="social-list-item">
-          <button type="button">
-            <a class="vk-icon" href="#">
-              <span class="visually-hidden"></span>
-            </a>
-          </button>
-          </li> 
+          <a class="vk-icon" href="#">
+              <span class="visually-hidden"></span></a>
+        </li> 
           <li class="social-list-item">
-            <button type="button">
               <a class="tg-icon" href="#">
-               <span class="visually-hidden"></span>
-             </a>
-            </button>
+               <span class="visually-hidden"></span></a>
         </li> 
         <li class="social-list-item">
-          <button type="button">
             <a class="youtube-icon" href="#">
-               <span class="visually-hidden"></span>
-             </a>
-          </button>
+               <span class="visually-hidden"></span></a>
         </li> 
       </ul>
-      <div class=phone><a href="tel:+78128121212">+7 (812) 812-12-12</a></div>
-      <p> <a href="https://htmlacademy.ru/"> <img src="#" alt="htmlacademy.ru"></a></p>
+      <a class="phone" href="tel:+78128121212">+7 (812) 812-12-12</a><a href="https://htmlacademy.ru/"> <img src="#" alt="логотип HTML Academy"></a>
      </footer>
-
-    
   </body>
-
 </html>
