@@ -10,7 +10,7 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-    <header class="main-header">
+    <header class="main-header" data-test="header">
       <nav>
         <p class="logo">
           <a href="index.html"> <img src="#" alt="На главную"></a>
@@ -27,9 +27,8 @@
         </ul>
       </nav>
     </header>
-
-    <main>
-        <section class="hero">
+    <main data-test="main">
+        <section class="hero" data-test=" filter">
             <h1>Гостиницы Седоны</h1>
             <ul class="breadcrumb">
                 <li><a href="index.html"> <img src="#" alt="На главную"></a></li>
@@ -86,7 +85,7 @@
                   <input type="reset" name="hotel-search-reset" id="hotel-search-reset" value="CБРОСИТь">
               </form>
         </section>
-        <section class="sorting-results">
+        <section class="sorting-results" data-test="catalog">
           <h2>найдено гостиниц:</h2>
           <form action="https://echo.htmlacademy.ru/courses" method="post"> 
             <output name="search-results" id="search-results">38</output>
@@ -176,7 +175,7 @@
             <li class="page active"><a href="#">10</a></li>
           </ul>
         </section>
-        <article class="subscribe">
+        <article class="subscribe" data-test="subscribe">
           <h2>Подпишитесь на рассылку</h2>
           <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form action="https://echo.htmlacademy.ru">
@@ -185,7 +184,7 @@
           </form>
         </article>      
     </main>
-     <footer>
+     <footer data-test="footer">
       <ul class="social-list"> 
         <li class="social-list-item">
           <button type="button">

@@ -10,7 +10,7 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-    <header class="main-header">
+    <header data-test="header" class="main-header">
       <nav>
         <p class="logo">
           <a href="index.html"> <img src="#" alt="На главную"></a>
@@ -27,9 +27,8 @@
         </ul>
       </nav>
     </header>
-
-    <main>
-      <section class="hero">
+    <main data-test="main">
+      <section class="hero" data-test="hero">
         <img id="hero-background" src="#" alt="Welcome to Sedona">  
         <!--
         <p><img class="introdution img-top" src="#" alt="Welcome to the gorgeous"></p>
@@ -39,7 +38,7 @@
         <h1>Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
         <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
       </section>
-      <section class="advanages">
+      <section class="advanages" data-test="advantages">
         <ul class="advanages-list">
           <li class="advanages-item">
             <h2 class="advanages-item-header">Настоящий городок</h2>
@@ -69,7 +68,7 @@
           </li>
         </ul>
       </section>
-      <section class="Invite"> <!-- стоит ли разделять логические блоки как это сделано в макете (подзаголовок и таблица в разных разделах), или же можно их объединить в одну секцию так как это логично-->
+      <section class="Invite" data-test="search"> <!-- стоит ли разделять логические блоки как это сделано в макете (подзаголовок и таблица в разных разделах), или же можно их объединить в одну секцию так как это логично-->
         <h2>Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
         <p>Опытный персонал и качественное обслуживание!</p>
         <ul class="invite-list">
@@ -89,13 +88,11 @@
             <p>Не только китайского, но и настоящего местного производства!</p>
           </li>
         </ul>
-      </section>
-      <section class="hotel-search">
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <button type="button"> <a href="#"></a> поиск гостиницы в Седоне</button>
       </section>
-      <article class="subscribe">
+      <article class="subscribe" data-test="subscribe">
         <h2>Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form action="https://echo.htmlacademy.ru">
@@ -104,7 +101,7 @@
         </form>
       </article>
      </main>
-     <footer>
+     <footer data-test="footer">
       <ul class="social-list"> 
         <li class="social-list-item">
           <button type="button">
