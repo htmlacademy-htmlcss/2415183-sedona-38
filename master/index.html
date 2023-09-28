@@ -2,12 +2,117 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="images/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <title>HTML Academy: Седона</title>
     <base href="https://htmlacademy-htmlcss.github.io/2415183-sedona-38/master/">
 </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
-
+    <header data-test="header" class="main-header">
+      <nav>
+        <p class="logo">
+          <a href="index.html"><img src="#" alt="Логотип города Седона"></a>
+        </p>
+        <ul class="navigation-list">
+          <li class="navigtion-item"> <a href="#">Главная</a></li>
+          <li class="navigtion-item"> <a href="#">О Седоне</a></li>
+          <li class="navigtion-item  active"> <a href="#">Гостиницы</a></li>
+        </ul>
+        <ul class="user-menu">
+          <li class="user-menu-item" id="search-button"> <a href="#"></a> </li>
+          <li class="user-menu-item" id="like-button"> <a href="#">12</a> </li> 
+          </ul>
+          <a href="#">Хочу сюда!</a>
+       </nav>
+    </header>
+    <main data-test="main">
+      <section class="hero" data-test="hero">
+        <img id="hero-background" src="#" alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!">  
+        <!--
+        <p><img class="introdution img-top" src="#" alt="Welcome to the gorgeous"></p>
+        <p><img class="introdution img-center" src="#" alt="SEDONA"></p>
+        <p><img class="introdution img-bottom" src="#" alt="Because the Grand Canyon sucks"></p>
+        <p><img class="introdution lower-decor" src="#" ></p>--> 
+        <p>Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
+        <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+      </section>
+      <section class="advanages" data-test="advantages">
+        <ul class="advanages-list">
+          <li class="advanages-item">
+            <h2 class="advanages-item-header">Настоящий городок</h2>
+            <p class="advanages-item-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+          </li>
+          <li class="advanages-item">
+             <img src="#" alt="Домик в Седоне">
+          </li>
+          <li class="advanages-item">
+            <h2 class="advanages-item-header">Небольшая площадь</h2>
+            <p class="advanages-item-text">Все достопримечательности находятся очень близко</p>
+          </li>
+          <li class="advanages-item">
+            <h2 class="advanages-item-header">Красивая дорога</h2>
+            <p class="advanages-item-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          </li>
+          <li class="advanages-item">
+            <h2 class="advanages-item-header">Мало туристов</h2>
+            <p class="advanages-item-text">Большинство едет в Гранд Каньон и толпится там</p>
+          </li>
+            <li class="advanages-item">
+            <h2 class="advanages-item-header">Там есть мост дьявола</h2>
+            <p class="advanages-item-text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+            <p><img src="#" alt="Мост дьявола"></p>
+          </li>
+        </ul>
+      </section>
+      <section class="Invite" data-test="search"> <!-- стоит ли разделять логические блоки как это сделано в макете (подзаголовок и таблица в разных разделах), или же можно их объединить в одну секцию так как это логично-->
+        <h2>Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+        <p>Опытный персонал и качественное обслуживание!</p>
+        <ul class="invite-list">
+          <li class="invite-list-item">
+            <h3>Жильё</h3>
+            <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+          </li>
+          <li class="invite-list-item">
+            <h3>Еда</h3>
+            <p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+          </li>
+          <li class="invite-list-item">
+            <h3>Сувениры</h3>
+            <p>Не только китайского, но и настоящего местного производства!</p>
+          </li>
+        </ul>
+        <h2>Заинтересовались?</h2>
+        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <a href="#">Поиск гостиницы в Седоне</a>
+      </section>
+      <article class="subscribe" data-test="subscribe">
+        <h2>Подпишитесь на рассылку</h2>
+        <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form action="https://echo.htmlacademy.ru">
+          <input name="email" id="subscribe-button" type="email" placeholder="Ваш e-mail" required>
+          <p><button type="submit">подписаться</button></p>
+        </form>
+      </article>
+     </main>
+     <footer data-test="footer">
+      <ul class="social-list"> 
+        <li class="social-list-item">
+          <a class="vk-icon" href="#">
+              <span class="visually-hidden"></span></a>
+        </li> 
+          <li class="social-list-item">
+              <a class="tg-icon" href="#">
+               <span class="visually-hidden"></span></a>
+        </li> 
+        <li class="social-list-item">
+            <a class="youtube-icon" href="#">
+               <span class="visually-hidden"></span></a>
+        </li> 
+      </ul>
+      <a class="phone" href="tel:+78128121212">+7 (812) 812-12-12</a><a href="https://htmlacademy.ru/"> <img src="#" alt="логотип HTML Academy"></a>
+     </footer>
   </body>
 </html>
