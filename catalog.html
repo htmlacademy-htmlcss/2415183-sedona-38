@@ -52,44 +52,45 @@
               <a>Гостиницы</a>
             </li>
           </ol>
-          <form action="https://echo.htmlacademy.ru/courses" method="post">
-            <fieldset class="hotel-options-list">
-              <legend class="hotel-options-list">Инфраструктура:</legend>
-                <ul class="hotel-options-list">
+          <div class="filter-wrapper">
+            <form action="https://echo.htmlacademy.ru/courses" method="post">
+              <fieldset class="hotel-options">
+                <legend class="hotel-options-list-legend">Инфраструктура:</legend>
+                  <ul class="hotel-options-list">
+                    <li>
+                      <input type="checkbox" name="hotel-options-list" id="pool" checked>
+                      <label for="pool">Бассейн</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="hotel-options-list" id="parking" checked>
+                      <label for="parking">Парковка</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="hotel-options-list" id="wi-fi">
+                      <label for="wi-fi">Wi-Fi</label>
+                    </li>
+                  </ul>
+              </fieldset>
+              <fieldset class="hotel-type">
+                <legend class="hotel-type-legend">Тип Жилья:</legend>
+                <form action="https://echo.htmlacademy.ru/courses" method="post">
+                <ul class="hotel-type-list">
                   <li>
-                    <input type="checkbox" name="hotel-options-list" id="pool" checked>
-                    <label for="pool">Бассейн</label>
+                    <input type="radio" name="hotel-type" id="hotel" checked>
+                    <label for="hotel">Гостиница</label>
                   </li>
                   <li>
-                    <input type="checkbox" name="hotel-options-list" id="parking" checked>
-                    <label for="parking">Парковка</label>
+                    <input type="radio" name="hotel-type" id="motel" >
+                    <label for="motel">Мотель</label>
                   </li>
                   <li>
-                    <input type="checkbox" name="hotel-options-list" id="wi-fi">
-                    <label for="wi-fi">Wi-Fi</label>
+                    <input type="radio" name="hotel-type" id="apartaments" >
+                    <label for="apartaments">Апартаменты</label>
                   </li>
                 </ul>
-            </fieldset>
-            <fieldset class="hotel-type">
-              <legend class="hotel-type-list">Тип Жилья:</legend>
-              <form action="https://echo.htmlacademy.ru/courses" method="post">
-              <ul class="hotel-type">
-                <li>
-                  <input type="radio" name="hotel-type" id="hotel" checked>
-                  <label for="hotel">Гостиница</label>
-                </li>
-                <li>
-                  <input type="radio" name="hotel-type" id="motel" >
-                  <label for="motel">Мотель</label>
-                </li>
-                <li>
-                  <input type="radio" name="hotel-type" id="apartaments" >
-                  <label for="apartaments">Апартаменты</label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="price-select">
-              <legend class="price-select-header">Стоимость, ₽:</legend>
+              </fieldset>
+              <fieldset class="price-select-form">
+                <legend class="price-select-header">Стоимость, ₽:</legend>
                 <div class="price-select">
                   <input class="price-from" type="number" name="price-start" id="price-from" value="0">
                   <label class="price-from-label" for="price-from">от</label>
@@ -97,11 +98,19 @@
                   <label class="price-to-label" for="price-to">до</label>
                 </div>
                 <div class="price-slider">
-                <input type="range" min="0" max="9000" value="0" class="slider" id="price-slider">
+                  <input type="range" min="0" max="9000" value="0" class="slider" id="price-slider">
                 </div>
-            <input class="submit-filter-button" type="submit" name="hotel-search-button" id="hotel-search-button" value="Применить">
-            <input class="reset-filter-button" type="reset" name="hotel-search-reset" id="hotel-search-reset" value="Сбросить">
-          </form>
+              </fieldset>
+              <ul class="filter-button-wrapper">
+                <li>
+                  <input class="submit-filter-button" type="submit" name="hotel-search-button" id="hotel-search-button" value="Применить">
+                </li>
+                <li>
+                  <input class="reset-filter-button" type="reset" name="hotel-search-reset" id="hotel-search-reset" value="Сбросить">
+                </li>
+              </ul>
+            </form>
+          </div>
       </section>
       <section class="sorting-results" data-test="catalog">
         <h2 class="visually-hidden">результаты поиска</h2>

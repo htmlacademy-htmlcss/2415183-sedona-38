@@ -128,6 +128,23 @@ input::placeholder{
     display: block;
 }
 
+.hero-index p{
+    margin: 0 auto;
+}
+
+.hero-bottom-decor {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.hero-text{
+    padding: 0;
+    margin-top: 51px;
+    margin-bottom: 20px;
+}
+
+
 /* блок преимуществ */
 .advantages {
     background-color: #ffffff;
@@ -141,6 +158,7 @@ input::placeholder{
     line-height: 26px;
     text-align: center;
     margin: 0 auto;
+    padding-bottom: 69px;
 }
 
 .advanages-list{
@@ -159,6 +177,8 @@ input::placeholder{
     text-align: center;
     text-transform: uppercase;
     margin: 0 auto;
+    padding-top: 69px;
+    padding-bottom: 25px;
 }
 
 .advanages-list h3{
@@ -412,6 +432,7 @@ input::placeholder{
 /* подвал */
 .footer {
     background-color: #ffffff;
+    width: 1200px;
 }
 
 .footer-conainer{
@@ -455,8 +476,11 @@ input::placeholder{
     background-repeat: no-repeat;
     background-position: center bottom;
     text-align: center;
-    padding: 0;
-    margin: 0;
+    padding-top: 35px;
+    padding-bottom: 70px;
+    padding-left: 70px;
+    padding-right: 70px;
+    margin: 0 auto;
     color: #ffffff;
 }
 
@@ -466,6 +490,8 @@ input::placeholder{
     font-weight: 700;
     line-height: 78px;
     text-align: left;
+    margin: 0 auto;
+    margin-bottom: 8px;
 }
 
 /* стили хлебных крошек */
@@ -474,24 +500,74 @@ input::placeholder{
     font-style: normal;
     font-weight: 400;
     line-height: 21px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+.breadcrumb li{
+padding-right: 10px;
 }
 
 /* стили фильтра */
 .hotel-options-list{
-font-size: 20px;
-font-style: normal;
-font-weight: 700;
-line-height: 24px;
-text-transform: capitalize;
-text-align: left;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: capitalize;
+    text-align: left;
+
 }
 
+.hotel-options{
+    border: none;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: capitalize;
+    text-align: left;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 32px;
+}
+
+.filter-wrapper{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.filter-wrapper form{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+
 /* чекбоксы */
+
+.hotel-options-list{
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
 .hotel-options-list li{
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 23px;
+    list-style: none;
+    margin: 0 auto;
+    padding-bottom:16px;
+    text-align: left;
 }
 
 .hotel-type{
@@ -500,32 +576,51 @@ text-align: left;
     font-weight: 700;
     line-height: 24px;
     text-transform: capitalize;
-    text-align: left
+    text-align: left;
+    border: none;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 32px;
+}
+
+.hotel-type-list{
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
 }
 
 /* радиокнопки */
-    .hotel-type li{
+    .hotel-type-list li{
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 23px;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+    padding-bottom:16px;
     }
 
+    /* стили цен */
 .price-select-header{
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: 24px;
     text-transform: capitalize;
-    text-align: left
+    text-align: left;
+    margin-bottom: 32px;
 }
 
-/* стили цен */
 .price-from {
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: 24px;
+    width: 143px;
+    padding: 12px 20px;
 }
 
 .price-to {
@@ -533,6 +628,8 @@ text-align: left;
     font-style: normal;
     font-weight: 700;
     line-height: 24px;
+    width: 143px;
+    padding: 12px 20px;
 }
 
 .price-from-label{
@@ -541,6 +638,7 @@ text-align: left;
     font-weight: 400;
     line-height: 24px;
     text-align: right;
+    color: #000000;
 }
 
 .price-to-label{
@@ -549,6 +647,16 @@ text-align: left;
     font-weight: 400;
     line-height: 24px;
     text-align: right;
+    color: #000000;
+}
+
+.price-select-form{
+    border: none;
+}
+
+.price-slider input{
+    width: 287px;
+    margin-top: 36px;
 }
 
 /* кнопки отправить и сброс */
@@ -562,6 +670,8 @@ text-align: left;
     color: #ffffff;
     background-color: #82B3D3;
     border: 0;
+    padding: 8px 50px;
+    margin-bottom: 32px;
 }
 .reset-filter-button {
     font-size: 16px;
@@ -573,8 +683,14 @@ text-align: left;
     color: #ffffff;
     background-color: transparent;
     border: 0;
+    padding: 8px 50px;
 }
 
+.filter-button-wrapper {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
 /* стили блока результатов */
 .sorting-results {
     background-color: #ffffff;
@@ -783,6 +899,5 @@ text-align: left;
 
 /*основной контент*/
 .page-container {
-    width: 1200px;
     margin: 0 auto;
 }
