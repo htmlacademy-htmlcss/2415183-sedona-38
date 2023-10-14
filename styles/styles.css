@@ -3,7 +3,7 @@
     font-family: "PT Sans";
     font-style: normal;
     font-weight: 400;
-    src: url("../fonts/ptsans-400.woff2") format(".woff2");
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -11,7 +11,7 @@
     font-family: "PT Sans";
     font-style: normal;
     font-weight: 700;
-    src: url("../fonts/ptsans-700.woff2") format(".woff2");
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -132,10 +132,18 @@ input::placeholder{
     align-items: center;
     list-style: none;
 }
+.user-menu a:not(:last-child){
+    padding: 1px;
+}
+
+.user-menu-item {
+    margin: 0 auto;
+    padding: 22px 12px;
+}
 
 /* число избранного */
 .favourites-quantity {
-    font-family: "PT Sans";
+    font-family: "PT Sans", sans-serif;
     font-size: 10px;
     font-weight: 400;
     line-height: 10px;
@@ -147,6 +155,9 @@ input::placeholder{
     height: 20px;
     text-align: center;
     padding: 5px 5px 5px 4px;
+    position: relative;
+    top: -15px;
+    left: -16px;
 }
 
 .favourites a{
@@ -166,6 +177,7 @@ input::placeholder{
     text-align: center;
     border-radius: 4px;
     padding: 8px 50px;
+    margin-left: 20px;
 }
 
 /* блок-герой главной страницы */
@@ -212,7 +224,7 @@ input::placeholder{
 .advantages {
     background-color: #ffffff;
     margin: 0 auto;
-    padding: 0;
+    padding-top: 69px;
 }
 
 .advantages p {
@@ -222,15 +234,7 @@ input::placeholder{
     line-height: 26px;
     text-align: center;
     margin: 0 auto;
-    padding-bottom: 69px;
-}
-
-.advanages-list{
-    margin: 0 auto;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
+    margin-bottom: 90px; /* по макету 69 + 21 отступ до следующего блока*/
 }
 
 .advantages h2 {
@@ -241,11 +245,19 @@ input::placeholder{
     text-align: center;
     text-transform: uppercase;
     margin: 0 auto;
-    padding-top: 69px;
     padding-bottom: 25px;
 }
 
-.advanages-list h3{
+.advantages-list{
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(3, 385px);
+    list-style: none;
+}
+
+.advantages-list h3{
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -254,37 +266,46 @@ input::placeholder{
     text-align: center;
 }
 
-.advanages-list p{
+.advantages-list p{
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 21px;
 }
 
-/* прреимущество с картинкой */
-.advanages-item-with-picture {
+/* преимущество с картинкой */
+.advantages-item-with-picture {
     background-color: #82B3D3;
-    display: flex;
-    margin: 0;
-    padding: 0;
     width: 100%;
+    height: 179px;
 }
-.advanages-item-with-picture .description{
+
+.advantages-picture{
+    margin: 0 auto;
+    padding: 0;
+    grid-column: span 2;
+    max-width: 100%;
+    height: auto;
+    object-fit:contain;
+    background-color: #82B3D3;
+}
+
+.advantages-item-with-picture{
     margin: 0;
     padding: 103px 85px;
     width: 230px;;
 }
 
-.advanages-item-with-picture h3{
+.advantages-item-with-picture h3{
     color: #ffffff;
 }
 
-.advanages-item-with-picture p{
+.advantages-item-with-picture p{
     color: #ffffff;
 }
 
 /* преимущество с базовым цветом */
-.advanages-item-standart {
+.advantages-item-standart {
     background-color: #83B3D31F;
     margin: 0;
     padding: 103px 85px;
@@ -293,7 +314,7 @@ input::placeholder{
 }
 
 /* преимущество с дополнтельным цветом */
-.advanages-item-other-color {
+.advantages-item-other-color {
     background-color: #83B3D333;
     margin: 0;
     padding: 103px 85px;
@@ -317,6 +338,7 @@ input::placeholder{
     text-align: center;
     width: 505px;
     margin: 0 auto;
+    padding-bottom: 20px;
 }
 
 .invite p {
@@ -325,9 +347,9 @@ input::placeholder{
     font-weight: 400;
     line-height: 26px;
     text-align: center;
-    padding-top: 20px;
     margin: 0 auto;
 }
+
 .invite h3{
     font-size: 24px;
     font-style: normal;
@@ -338,9 +360,11 @@ input::placeholder{
 }
 
 .invite-list{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
     list-style: none;
-    margin: 0 0;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .invite-list-item{
@@ -353,26 +377,31 @@ input::placeholder{
     padding-right:85px;
 }
 
-
 .invite-list-item-house {
     background-color: #83B3D31F;
     background-image: url("../images/index/advantage-house.svg");
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center 80px;
+    ;
 }
 
 .invite-list-item-souveneer{
     background-color: #83B3D31F;
     background-image: url("../images/index/advantage-souveneer.svg");
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center 80px;
 }
 
 .invite-list-item-food {
     background-color: #ffffff;
     background-image: url("../images/index/advantage-food.svg");
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center 80px;
+}
+
+.invite-list h3{
+    margin-top: 102px;
+    margin-bottom: 30px;
 }
 
 .invite-list p{
@@ -414,15 +443,20 @@ input::placeholder{
 
 .hotel-search-link {
     color: #ffffff;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 20px;
+    line-height: 36px;
     font-style: normal;
     font-weight: 700;
     text-transform: uppercase;
     background-color: #756157;
     text-decoration: none;
     text-align: center;
-    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 276px;
+    height: 36px;
+    margin: 0 auto ;
     padding: 8px 50px;
     border-radius: 4px;
 }
@@ -466,6 +500,7 @@ input::placeholder{
 }
 
 .subscribe-button{
+    font-family: "PT Sans";
     color: #ffffff;
     font-size: 16px;
     line-height: 20px;
@@ -478,15 +513,18 @@ input::placeholder{
     border: 0;
     padding: 8px 50px;
     margin: 0 0;
-    border-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 
 .email-input{
+    font-family: "PT Sans";
     border: 0;
-    border-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
     padding: 12px 20px;
     margin: 0 0;
-    width: 350px;
+    width: 412px;
 }
 
 .subsribe-wrapper {
@@ -500,9 +538,11 @@ input::placeholder{
 }
 
 .footer-conainer{
+    background-color: #ffffff;
     display: flex;
     flex-direction: row;
     margin: 0 auto;
+    margin-right: auto;
     padding: 30px 70px;
     justify-content: space-between;
 }
@@ -511,15 +551,16 @@ input::placeholder{
     display: flex;
     flex-direction: row;
     list-style: none;
+    padding: 0;
+    justify-content: space-between;
 }
 
 .social-list-item{
     margin: 0 auto;
     padding-left: 10px;
     padding-right: 10px;
-
-
 }
+
 .phone{
     font-size: 40px;
     font-style: normal;
@@ -529,6 +570,7 @@ input::placeholder{
     text-align: center;
     text-decoration: none;
     color: #000000;
+    vertical-align: middle;
 }
 
 /* стили каталога */
