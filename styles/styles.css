@@ -57,6 +57,11 @@ body {
     flex-direction: column;
     min-height: 100%;
 }
+.page-container {
+    margin: 0 auto;
+    width: 1200px;
+    flex-grow: 1;
+}
 
 input {
     font-family: inherit;
@@ -71,6 +76,40 @@ input::placeholder{
 
 /* стили главной страницы, шапки и подвала */
 /* навигация */
+
+.header {
+    margin: 0 auto;
+    display: flex;
+    min-width: auto;
+    height: 64px;
+    background-color: #ffffff;
+    padding: 0 70px;
+}
+
+.logo {
+    margin: 0;
+}
+
+.logo a{
+    margin: 0 auto;
+    position: relative;
+}
+
+.navigation {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+.navigation-list {
+    margin: 0;
+    margin-left: 30px;
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+
 .navigation-item a {
     font-size: 20px;
     font-weight: 700;
@@ -80,6 +119,18 @@ input::placeholder{
     color: #000000;
     background-color: #ffffff;
     padding: 16px 20px;
+    margin-right: auto;
+    display: block;
+}
+
+.user-menu {
+    margin: 0;
+    padding: 0;
+    max-width: 400px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    list-style: none;
 }
 
 /* число избранного */
@@ -113,19 +164,22 @@ input::placeholder{
     background-color: #756157;
     text-decoration: none;
     text-align: center;
+    border-radius: 4px;
+    padding: 8px 50px;
 }
 
 /* блок-герой главной страницы */
 .hero-index {
     background-image: url(../images/index/hero-background.jpg);
-    background-size: 100% auto;
+    background-size:cover;
     background-color: #333333;
     background-repeat: no-repeat;
     background-position: center bottom;
     text-align: center;
-    padding: 0;
+    padding: 0 0;
     margin: 0 auto;
     display: block;
+
 }
 
 .hero-index p{
@@ -133,9 +187,18 @@ input::placeholder{
 }
 
 .hero-bottom-decor {
-    display: block;
     margin: 0 auto;
     padding: 0;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.decor-wrapper {
+    margin: 0 auto;
+    padding: 0;
+    line-height: 0; /* при базовом значении высоты строки появляется неудаляемый отступ снизу*/
+
 }
 
 .hero-text{
@@ -149,6 +212,7 @@ input::placeholder{
 .advantages {
     background-color: #ffffff;
     margin: 0 auto;
+    padding: 0;
 }
 
 .advantages p {
@@ -868,36 +932,8 @@ padding-right: 10px;
 }
 
 /*сетка страниц и крупных блоков*/
-.main-container {
-    flex-grow: 1;
-}
 
 /*навигация*/
-.navigation {
-    display: flex;
-    width: 1200px;
-    margin: 0 auto;
-    background-color: #ffffff;
-}
 
-.navigation-list {
-    margin: 0;
-    padding: 0;
-    width: 507px;
-    display: flex;
-    list-style: none;
-}
-
-.user-menu {
-    margin: 0;
-    padding: 0;
-    max-width: 400px;
-    margin-left: auto;
-    display: flex;
-    list-style: none;
-}
 
 /*основной контент*/
-.page-container {
-    margin: 0 auto;
-}
