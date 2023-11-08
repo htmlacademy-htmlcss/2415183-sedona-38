@@ -90,13 +90,13 @@ input::placeholder{
     display: flex;
     min-width: auto;
     max-width: 100%;
-    height: 64px;
     background-color: #ffffff;
     padding: 0;
 }
 
 .logo {
     margin: 0;
+    margin-bottom: -6px;
 }
 
 .logo a{
@@ -117,7 +117,9 @@ input::placeholder{
     margin-left: 30px;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
+    max-width: 450px;
 }
 
 .navigation-item a {
@@ -165,15 +167,16 @@ input::placeholder{
     line-height: 10px;
     color: #ffffff;
     background-color: #7DB54F;
-    border-radius: 50%;
+    border-radius: 10px;
     text-decoration: none;
-    width: 20px;
+    min-width: 20px;
     height: 20px;
     text-align: center;
-    padding: 5px 5px 5px 4px;
+    padding: 5px 5px 5px 5px;
     position: relative;
     top: -15px;
     left: -16px;
+
 }
 
 .favourites a{
@@ -204,10 +207,10 @@ input::placeholder{
     background-repeat: no-repeat;
     background-position: center bottom;
     text-align: center;
-    padding: 0 0;
     margin: 0 auto;
     display: block;
-
+    padding-top: 51px;
+    padding-bottom: 82px;
 }
 
 .hero-index p{
@@ -216,6 +219,7 @@ input::placeholder{
 
 .hero-bottom-decor {
     margin: 0 auto;
+    margin-bottom: -82px; /* компенсирует нижний паддинг блока героя, который рекомендовали на 6 лайве*/
     padding: 0;
     max-width: 100%;
     height: auto;
@@ -223,16 +227,7 @@ input::placeholder{
 }
 
 .decor-wrapper {
-    margin: 0 auto;
-    padding: 0;
     line-height: 0; /* при базовом значении высоты строки появляется неудаляемый отступ снизу*/
-
-}
-
-.hero-text{
-    padding: 0;
-    margin-top: 51px;
-    margin-bottom: 20px;
 }
 
 
@@ -268,9 +263,19 @@ input::placeholder{
     margin: 0 auto;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(3, 400px);
-    grid-template-rows: repeat(3, 385px);
+    grid-template-columns: repeat(3, 1fr);
     list-style: none;
+}
+
+.advanatges-item-container {
+    width: 230px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 90px 85px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .advantages-list h3{
@@ -280,6 +285,7 @@ input::placeholder{
     line-height: 28px;
     text-transform: uppercase;
     text-align: center;
+    margin: 0 auto;
 }
 
 .advantages-list p{
@@ -287,29 +293,22 @@ input::placeholder{
     font-style: normal;
     font-weight: 400;
     line-height: 21px;
+    margin: 0 auto;
 }
 
 /* преимущество с картинкой */
 .advantages-item-with-picture {
+    display: flex;
     background-color: #82B3D3;
     width: 100%;
-    height: 179px;
-}
-
-.advantages-picture{
-    margin: 0 auto;
-    padding: 0;
-    grid-column: span 2;
-    max-width: 100%;
-    height: auto;
-    object-fit:contain;
-    background-color: #82B3D3;
-}
-
-.advantages-item-with-picture{
+    min-height: 200px;
+    grid-column-start: 1;
+    grid-column-end: -1;
     margin: 0;
-    padding: 103px 85px;
-    width: 230px;;
+}
+
+.advantages-item-with-picture img{
+object-fit: cover;
 }
 
 .advantages-item-with-picture h3{
@@ -324,7 +323,6 @@ input::placeholder{
 .advantages-item-standart {
     background-color: #83B3D31F;
     margin: 0;
-    padding: 103px 85px;
     width: 230px;
 
 }
@@ -333,7 +331,6 @@ input::placeholder{
 .advantages-item-other-color {
     background-color: #83B3D333;
     margin: 0;
-    padding: 103px 85px;
     width: 230px;
 }
 
@@ -510,9 +507,9 @@ input::placeholder{
     font-weight: 400;
     line-height: 26px;
     text-align: center;
-    width: 475px;
     margin: 0 auto;
     margin-bottom: 54px;
+    box-sizing: border-box;
 }
 
 .subscribe-button{
@@ -527,7 +524,9 @@ input::placeholder{
     text-decoration: none;
     text-align: center;
     border: 0;
-    padding: 8px 50px;
+    padding: 8px 10px;
+    box-sizing: border-box;
+    min-width: 212px;
     margin: 0 0;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
@@ -790,8 +789,10 @@ padding-right: 10px;
     color: #ffffff;
     background-color: #82B3D3;
     border: 0;
-    padding: 8px 50px;
+    padding: 8px 10px;
     margin-bottom: 32px;
+    box-sizing: border-box;
+    min-width: 191px;
 }
 .reset-filter-button {
     font-size: 16px;
@@ -803,13 +804,16 @@ padding-right: 10px;
     color: #ffffff;
     background-color: transparent;
     border: 0;
-    padding: 8px 50px;
+    padding: 8px 10px;
+    box-sizing: border-box;
+    min-width: 191px;
 }
 
 .filter-button-wrapper {
     list-style: none;
     margin: 0 auto;
     padding: 0;
+    box-sizing: border-box;
 }
 /*каталог*/
 .catalog {
@@ -883,6 +887,7 @@ padding-right: 10px;
     border-radius: 4px;
     border: 2px solid #E5E5E5;
     padding: 14px 12px;
+    box-sizing: border-box;
 }
 
 .view-type .active{
@@ -943,6 +948,7 @@ padding-right: 10px;
     flex-direction: row;
     justify-content: space-between;
     padding: 0;
+    box-sizing: border-box;
 }
 .cards-price .price{
     text-align: right;
@@ -966,9 +972,11 @@ padding-right: 10px;
     background-color: #756157;
     text-decoration: none;
     text-align: center;
-    padding: 8px 26px;
+    padding: 8px 10px;
     margin: 0;
     border-radius: 4px;
+    min-width: 140px;
+    box-sizing: border-box;
 }
 
 .to-favourite{
@@ -1016,11 +1024,14 @@ padding-right: 10px;
 .pagination {
     background-color: #ffffff;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     margin: 0 auto;
     padding: 0;
+    max-width: 100%;
     padding-top: 40px;
     list-style: none;
+    gap: 8px;
 
 }
 
@@ -1038,13 +1049,14 @@ padding-right: 10px;
 }
 .pagination-button a{
     display: flex;
-    width: 60px;
     height: 60px;
+    min-width: 60px;
+    box-sizing: border-box;
     align-items: center;
     margin: 0 auto;
     justify-content: center;
-    gap: 8px;
-    margin-right: 8px;
+
+    padding: 0 10px;
 }
 
 
@@ -1104,10 +1116,3 @@ padding-right: 10px;
     text-align: center;
     border: 0;
 }
-
-/*сетка страниц и крупных блоков*/
-
-/*навигация*/
-
-
-/*основной контент*/
