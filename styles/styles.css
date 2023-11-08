@@ -274,8 +274,7 @@ input::placeholder{
     flex-direction: column;
     justify-content: flex-start;
     padding: 90px 85px;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: 0 0;
 }
 
 .advantages-list h3{
@@ -296,42 +295,39 @@ input::placeholder{
     margin: 0 auto;
 }
 
-/* преимущество с картинкой */
-.advantages-item-with-picture {
+/* карточка преимущество с базовым цветом */
+.advantages-item {
+    background-color: #83B3D31F;
+    margin: 0 auto;
+}
+
+/* карточка преимущество с дополнтельным цветом  */
+.advantages-item:not(.with-picture):nth-child(odd){
+    background-color: #83B3D333;
+    margin: 0 auto;
+}
+
+/* карточка преимущество с картинкой */
+.with-picture {
     display: flex;
     background-color: #82B3D3;
     width: 100%;
     min-height: 200px;
     grid-column-start: 1;
     grid-column-end: -1;
-    margin: 0;
+    margin: 0 auto;
 }
 
-.advantages-item-with-picture img{
+.with-picture img{
 object-fit: cover;
 }
 
-.advantages-item-with-picture h3{
+.with-picture h3{
+color: #ffffff;
+}
+
+.with-picture p{
     color: #ffffff;
-}
-
-.advantages-item-with-picture p{
-    color: #ffffff;
-}
-
-/* преимущество с базовым цветом */
-.advantages-item-standart {
-    background-color: #83B3D31F;
-    margin: 0;
-    width: 230px;
-
-}
-
-/* преимущество с дополнтельным цветом */
-.advantages-item-other-color {
-    background-color: #83B3D333;
-    margin: 0;
-    width: 230px;
 }
 
 /* блок особенностей Седоны */
@@ -388,25 +384,26 @@ object-fit: cover;
     padding-bottom: 80px ;
     padding-left:85px;
     padding-right:85px;
+    background-color: #83B3D31F;
+}
+
+.invite-list-item:nth-child(even){
+    background-color: #ffffff;
 }
 
 .invite-list-item-house {
-    background-color: #83B3D31F;
     background-image: url("../images/index/advantage-house.svg");
     background-repeat: no-repeat;
     background-position: center 80px;
-    ;
 }
 
 .invite-list-item-souveneer{
-    background-color: #83B3D31F;
     background-image: url("../images/index/advantage-souveneer.svg");
     background-repeat: no-repeat;
     background-position: center 80px;
 }
 
 .invite-list-item-food {
-    background-color: #ffffff;
     background-image: url("../images/index/advantage-food.svg");
     background-repeat: no-repeat;
     background-position: center 80px;
