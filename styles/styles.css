@@ -69,16 +69,36 @@ body {
     width: 1200px;
 }
 
-input {
+/* стили инпутов */
+.field {
     font-family: inherit;
     font-size: 18px;
     line-height: 24px;
-    color: #000000;
+    font-weight: 400;
+    background-color: rgba(242, 242, 242, 1);
 }
 
-input::placeholder{
-    color: #dadada;
+.field:hover,
+.field:focus{
+    background-color: rgba(230, 230, 230, 1);
 }
+
+.field:disabled,
+.field:disabled:hover {
+    background-color: rgba(229, 229, 229, 1);
+    color: #ffffff;
+}
+
+
+input::placeholder{
+    color: rgba(0, 0, 0, 0.3)
+}
+
+input:disabled::placeholder{
+    color: #ffffff
+}
+
+
 
 /* стили главной страницы, шапки и подвала */
 /* навигация */
@@ -573,7 +593,7 @@ color: #ffffff;
     background-position: center top;
     color: #ffffff;
     text-align: center;
-    margin: 0 auto;
+    margin: 0;
     padding-top: 96px;
     padding-left: 258px;
     padding-right: 258px;
@@ -616,8 +636,8 @@ color: #ffffff;
     border: 0;
     padding: 8px 10px;
     box-sizing: border-box;
-    min-width: 212px;
-    margin: 0 0;
+    min-width: 232px;
+    margin: 0;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 }
@@ -644,11 +664,13 @@ color: #ffffff;
     padding: 12px 20px;
     margin: 0 0;
     width: 412px;
-    background-color: #F2F2F2;
 }
 
-.subsribe-wrapper {
+.subscribe-wrapper {
     display: flex;
+    width: 684px;;
+    margin: 0;
+    padding: 0;
 }
 
 /* подвал */
@@ -900,43 +922,37 @@ background-position: center right 10px;
     padding: 0;
 }
 
-/*
-.check {
+.control{
+    position: relative;
+    display: block;
     padding-left: 36px;
 }
 
-.check-input {
+.control-mark {
     position: absolute;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-
-
-.check-box-custom{
-    position: absolute;
-    width: 1em;
-    height: 1em;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: none;
     background-color: #ffffff;
     border-radius: 4px;
-    margin-left: -36px;
 }
 
+.control:hover .control-mark{
+    background-color: rgba(255, 255, 255, 0.7);
+}
 
-.check-input:checked + .check-box-custom {
+.control:active .control-mark{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::after {
     background-image: url("../images/decoration/checkbox-and-radiobutton/checkbox-on-normal-or-browser-focus.svg");
+    background-size: 20px 20px;
+    background-color: #F2F2F2;
     background-position: center;
 }
-
-.check-input:focus + .check-box-custom {
-    background-image: url("../images/decoration/checkbox-and-radiobutton/checkbox-off-hover.svg");
-    background-position: center;
-}
-
-.check-input:checked:focus + .check-box-custom {
-    background-image: url("../images/decoration/checkbox-and-radiobutton/checkbox-off-hover.svg");
-    background-position: center;
-} */
 
 /* радиокнопки */
 .hotel-type{
@@ -959,7 +975,7 @@ background-position: center right 10px;
     padding: 0;
 }
 
-.hotel-type-list li{
+.hotel-type-item{
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -1013,13 +1029,12 @@ background-position: center right 10px;
     font-style: normal;
     font-weight: 700;
     line-height: 24px;
-    width: 143px;
+    max-width: 143px;
     box-sizing: border-box;
     padding: 12px 20px;
     border: none;
     border-radius: 4px 0 0 4px;
     margin-right: 2px;
-
 }
 
 .price-from-label{
@@ -1028,7 +1043,7 @@ background-position: center right 10px;
     font-weight: 400;
     line-height: 24px;
     text-align: right;
-    color: rgb(0, 0, 0, 0.3);
+    color: rgb(0, 0, 0, 0.7);
     margin: 0;
     padding: 0;
     position: absolute;
@@ -1042,7 +1057,7 @@ background-position: center right 10px;
     font-style: normal;
     font-weight: 700;
     line-height: 24px;
-    width: 143px;;
+    max-width: 143px;;
     box-sizing: border-box;
     padding: 12px 20px;
     border: none;
@@ -1055,7 +1070,7 @@ background-position: center right 10px;
     font-weight: 400;
     line-height: 24px;
     text-align: right;
-    color: rgb(0, 0, 0, 0.3);
+    color: rgb(0, 0, 0, 0.7);
     margin: 0;
     padding: 0;
     position: absolute;
@@ -1064,15 +1079,44 @@ background-position: center right 10px;
     right: 12px;
 }
 
-.price-slider {
-    margin: 0;
-    padding: 0;
+/* диапазон цен */
+.range-scale {
+position: relative;
+height: 4px;
+margin-top: 46px;
+background-color: rgba(255, 255, 255, 0.3);
 }
 
-.price-slider input{
-    width: 287px;
-    margin-top: 36px;
+.range-bar {
+    position: absolute;
+    height: 4px;
+    background-color: #ffffff;
 }
+
+.range-toggle{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.range-toggle:active{
+    border: 2px solid rgba(130 , 179, 211, 1);
+}
+
+.toggle-min{
+    top: -8px;
+    right: 0px;
+}
+
+.toggle-max{
+    top: -8px;
+    left: 0px;
+}
+
 
 /* кнопки отправить и сброс */
 .filter-button-wrapper {
@@ -1146,7 +1190,7 @@ background-position: center right 10px;
     color: rgb(255, 255, 255, 0.3);
 }
 
-*каталог*/
+/* каталог */
 .catalog {
     background-color: #ffffff;
     margin: 0 auto;
@@ -1523,7 +1567,7 @@ background-position: center right 10px;
     background-image: none;
     background-color: #ffffff;
     color: #000000;
-    margin: 0 auto;
+    margin: 0 0;
     padding-top: 96px;
     padding-bottom: 104px;
     padding-left: 258px;
