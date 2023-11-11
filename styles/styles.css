@@ -841,25 +841,49 @@ background-position: center right 10px;
 }
 
 .filter-wrapper{
-    margin: 0 auto;
+    margin: 0 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.filter-wrapper form{
-    margin: 0 auto;
+.filter-form{
+    margin: 0 0;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: space-between;
+    align-items: top;
+}
+
+.check-radio-wrapper{
+    display: flex;
+    margin: 0;
+    margin-right:  auto;
+    padding: 0;
 }
 
 /* чекбоксы */
-.hotel-options-list{
-    list-style: none;
-    margin: 0 auto;
+.hotel-options{
+    margin: 0;
+    margin-right: 70px;
     padding: 0;
 }
+
+.hotel-options-list{
+    margin: 0;
+    margin-top: 32px;
+    padding: 0;
+    list-style: none;
+}
+
+
+.hotel-options-list-legend,
+.hotel-type-legend {
+    margin: 0;
+    padding: 0;
+}
+
 
 .hotel-options-list li{
     font-size: 18px;
@@ -871,6 +895,11 @@ background-position: center right 10px;
     padding-bottom:16px;
     text-align: left;
 }
+
+.hotel-options-list li:last-child{
+    padding: 0;
+}
+
 /*
 .check {
     padding-left: 36px;
@@ -909,7 +938,7 @@ background-position: center right 10px;
     background-position: center;
 } */
 
-
+/* радиокнопки */
 .hotel-type{
     font-size: 20px;
     font-style: normal;
@@ -919,19 +948,18 @@ background-position: center right 10px;
     text-align: left;
     border: none;
     list-style: none;
-    margin: 0 auto;
+    margin: 0 0;
     padding: 0;
-    padding-top: 32px;
 }
 
 .hotel-type-list{
     list-style: none;
-    margin: 0 auto;
+    margin: 0 0;
+    margin-top: 32px;
     padding: 0;
 }
 
-/* радиокнопки */
-    .hotel-type-list li{
+.hotel-type-list li{
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -943,7 +971,18 @@ background-position: center right 10px;
     padding-bottom:16px;
     }
 
-    /* стили цен */
+    .hotel-type-list li:last-child{
+        padding: 0;
+    }
+
+/* стили цен */
+.price-select-form{
+    border: none;
+    margin: 0;
+    margin-right: 70px;
+    padding: 0;
+}
+
 .price-select-header{
     font-size: 20px;
     font-style: normal;
@@ -951,25 +990,36 @@ background-position: center right 10px;
     line-height: 24px;
     text-transform: capitalize;
     text-align: left;
+    margin: 0;
+    padding: 0;
     margin-bottom: 32px;
+    vertical-align: top;
 }
 
+.price-select{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+.price-from-wrapper{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
 .price-from {
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: 24px;
     width: 143px;
+    box-sizing: border-box;
     padding: 12px 20px;
-}
+    border: none;
+    border-radius: 4px 0 0 4px;
+    margin-right: 2px;
 
-.price-to {
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 24px;
-    width: 143px;
-    padding: 12px 20px;
 }
 
 .price-from-label{
@@ -978,7 +1028,25 @@ background-position: center right 10px;
     font-weight: 400;
     line-height: 24px;
     text-align: right;
-    color: #000000;
+    color: rgb(0, 0, 0, 0.3);
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+}
+
+.price-to {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    width: 143px;;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 0 4px 4px 0;
 }
 
 .price-to-label{
@@ -987,11 +1055,18 @@ background-position: center right 10px;
     font-weight: 400;
     line-height: 24px;
     text-align: right;
-    color: #000000;
+    color: rgb(0, 0, 0, 0.3);
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
 }
 
-.price-select-form{
-    border: none;
+.price-slider {
+    margin: 0;
+    padding: 0;
 }
 
 .price-slider input{
@@ -1000,6 +1075,15 @@ background-position: center right 10px;
 }
 
 /* кнопки отправить и сброс */
+.filter-button-wrapper {
+    list-style: none;
+    margin: 0 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
 .submit-filter-button {
     font-size: 16px;
     font-style: normal;
@@ -1016,6 +1100,7 @@ background-position: center right 10px;
     box-sizing: border-box;
     min-width: 191px;
 }
+
 .submit-filter-button:hover {
     background-color: rgba(104, 162, 202, 1);
 }
@@ -1061,15 +1146,7 @@ background-position: center right 10px;
     color: rgb(255, 255, 255, 0.3);
 }
 
-
-.filter-button-wrapper {
-    list-style: none;
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/*каталог*/
+*каталог*/
 .catalog {
     background-color: #ffffff;
     margin: 0 auto;

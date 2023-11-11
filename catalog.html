@@ -55,7 +55,8 @@
             </li>
           </ol>
           <div class="filter-wrapper">
-            <form action="https://echo.htmlacademy.ru/courses" method="post">
+            <form class="filter-form" action="https://echo.htmlacademy.ru/courses" method="post">
+              <div class="check-radio-wrapper">
               <fieldset class="hotel-options">
                 <legend class="hotel-options-list-legend">Инфраструктура:</legend>
                   <ul class="hotel-options-list">
@@ -100,13 +101,18 @@
                   </li>
                 </ul>
               </fieldset>
+              </div>
               <fieldset class="price-select-form">
                 <legend class="price-select-header">Стоимость, ₽:</legend>
                 <div class="price-select">
-                  <input class="price-from" type="number" name="price-start" id="price-from" value="0">
-                  <label class="price-from-label" for="price-from">от</label>
-                  <input class="price-to" type="number" name="price-end" id="price-to" value="9000">
-                  <label class="price-to-label" for="price-to">до</label>
+                  <div class="price-from-wrapper">
+                    <input class="price-from" type="number" name="price-start" id="price-from" min="0" value="0">
+                    <label class="price-from-label" for="price-from">от</label>
+                  </div>
+                  <div class="price-from-wrapper">
+                    <input class="price-to" type="number" name="price-end" id="price-to" min="0" value="9000">
+                    <label class="price-to-label" for="price-to">до</label>
+                  </div>
                 </div>
                 <div class="price-slider">
                   <input type="range" min="0" max="9000" value="0" class="slider" id="price-slider">
