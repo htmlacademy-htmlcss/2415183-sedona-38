@@ -28,13 +28,16 @@
             </li>
             <li class="user-menu-item favourites">
               <span class="visually-hidden"> избранное </span>
-              <a class="favourites-link" href="#"> <svg class="favourites-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="black">
-                <path d="M8.9 17C8.6 17 8.3 16.9 8.1 16.6C2.7 10.5 1.4 9.1 1.1 8.7C0.4 7.8 0 6.6 0 5.4C0 2.4 2.4 0 5.5 0C6.8 0 8 0.5 9 1.3C10 0.5 11.3 0 12.5 0C15.5 0 18 2.4 18 5.4C18 6.7 17.5 7.9 16.7 8.8L9.7 16.7C9.5 16.9 9.3 17 8.9 17ZM2.9 7.5C3.2 7.9 6.4 11.5 9 14.4L15.2 7.4C15.7 6.9 15.9 6.2 15.9 5.4C15.9 3.6 14.4 2.1 12.6 2.1C11.6 2.1 10.6 2.6 9.9 3.4C9.6 3.7 9.3 3.8 9 3.8C8.7 3.8 8.4 3.6 8.2 3.4C7.5 2.6 6.5 2.1 5.5 2.1C3.7 2.1 2.2 3.6 2.2 5.4C2.1 6.3 2.5 7 2.9 7.5C2.8 7.5 2.8 7.5 2.9 7.5Z" />
-              </svg>
-            </a>
-            <span class="favourites-quantity">12</span>
+              <a class="favourites-link" href="#">
+                <svg class="favourites-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="black">
+                  <path d="M8.9 17C8.6 17 8.3 16.9 8.1 16.6C2.7 10.5 1.4 9.1 1.1 8.7C0.4 7.8 0 6.6 0 5.4C0 2.4 2.4 0 5.5 0C6.8 0 8 0.5 9 1.3C10 0.5 11.3 0 12.5 0C15.5 0 18 2.4 18 5.4C18 6.7 17.5 7.9 16.7 8.8L9.7 16.7C9.5 16.9 9.3 17 8.9 17ZM2.9 7.5C3.2 7.9 6.4 11.5 9 14.4L15.2 7.4C15.7 6.9 15.9 6.2 15.9 5.4C15.9 3.6 14.4 2.1 12.6 2.1C11.6 2.1 10.6 2.6 9.9 3.4C9.6 3.7 9.3 3.8 9 3.8C8.7 3.8 8.4 3.6 8.2 3.4C7.5 2.6 6.5 2.1 5.5 2.1C3.7 2.1 2.2 3.6 2.2 5.4C2.1 6.3 2.5 7 2.9 7.5C2.8 7.5 2.8 7.5 2.9 7.5Z" />
+                </svg>
+                <span class="favourites-quantity">12</span>
+              </a>
           </li>
-          <li><a class="want-to-sedona-link" href="#">Хочу сюда!</a></li>
+          <li class="want-to-sedona-wrapper">
+            <a class="want-to-sedona-link" href="#">Хочу сюда!</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -42,80 +45,73 @@
       <section class="hero-catalog" data-test=" filter">
         <h1>Гостиницы Седоны</h1>
           <ol class="breadcrumbs">
-            <li>
+            <li class="breadcrumbs-item">
               <a href="index.html">
-                <svg class="breadcrumbs-item" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                <svg  xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
                 <path d="M6.37109 0.5L0.371094 6.30006V12.5001H12.3711V6.30006L6.37109 0.5ZM11.3711 11.5001H1.37109V6.70005L6.37109 1.9L11.3711 6.70005V11.5001Z" fill="white"/>
                 <path d="M4.37109 10.5001H5.37109V8.00005H7.37109V10.5001H8.37109V7.00005H4.37109V10.5001Z" fill="white"/>
                 </svg>
               </a>
             </li>
             <li class="breadcrumbs-item">
-              <a>Гостиницы</a>
+              <a href="#">Гостиницы</a>
             </li>
           </ol>
-
           <div class="filter-wrapper">
             <form class="filter-form" action="https://echo.htmlacademy.ru/courses" method="post">
-
               <div class="check-radio-wrapper">
-
                 <fieldset class="hotel-options">
                   <legend class="hotel-options-list-legend">Инфраструктура:</legend>
                     <ul class="hotel-options-list">
                       <li>
                         <label class="control">
+                          <input class="control-input visually-hidden" type="checkbox" name="pool" id="pool" checked>
                           <span class="control-mark"></span>
-                          <input class="control-input visually-hidden1" type="checkbox" name="hotel-options-list" id="pool" checked>
                           <span class="control-label">Бассейн</span>
                         </label>
                       </li>
                       <li>
                         <label class="control">
+                          <input class="control-input visually-hidden" type="checkbox" name="parking" id="parking" checked>
                           <span class="control-mark"></span>
-                          <input class="control-input visually-hidden1" type="checkbox" name="hotel-options-list" id="parking" checked>
                           <span class="control-label">Парковка</span>
                         </label>
                       </li>
                       <li>
                         <label class="control">
+                          <input class="control-input visually-hidden" type="checkbox" name="hotel-options-list" id="wi-fi">
                           <span class="control-mark"></span>
-                          <input class="control-input visually-hidden1" type="checkbox" name="hotel-options-list" id="wi-fi">
                           <span class="control-label">Wi-Fi</span>
                         </label>
                       </li>
                     </ul>
                 </fieldset>
-
-
-
                 <fieldset class="hotel-type">
                   <legend class="hotel-type-legend">Тип Жилья:</legend>
                   <ul class="hotel-type-list">
                     <li class="hotel-type-item">
                       <label class="control" for="hotel">
-                        <input class="control-input visually-hidden1" type="radio" name="hotel-type" value="hotel" id="hotel" checked>
+                        <input class="control-input visually-hidden" type="radio" name="hotel-type" value="hotel" id="hotel" checked>
                         <span class="control-mark"></span>
                         <span class="control-label">Гостиница</span>
                       </label>
                     </li>
                     <li class="hotel-type-item">
                       <label class="control" for="motel">
-                        <input class="control-input visually-hidden1" type="radio" name="hotel-type" value="motel" id="motel" >
+                        <input class="control-input visually-hidden" type="radio" name="hotel-type" value="motel" id="motel" >
                         <span class="control-mark"></span>
                         <span class="control-label">Мотель</span>
                       </label>
                     </li>
                     <li class="hotel-type-item">
                       <label class="control" for="apartaments">
-                        <input class="control-input visually-hidden1" type="radio" name="hotel-type" value="apartaments" id="apartaments" >
+                        <input class="control-input visually-hidden" type="radio" name="hotel-type" value="apartaments" id="apartaments" >
                         <span class="control-mark"></span>
                         <span class="control-label">Апартаменты</span>
                       </label>
                     </li>
                   </ul>
                 </fieldset>
-
               </div>
                 <fieldset class="price-select-form">
                   <legend class="price-select-header">Стоимость, ₽:</legend>
@@ -131,12 +127,12 @@
                     </div>
                     <div class="range">
                       <div class="range-scale">
-                        <div class="range-bar" style="left: 0px; width: 226px">
+                        <div class="range-bar" style="left: 0 px; width: 226px">
                           <button class="range-toggle toggle-min">
                             <span class="visually-hidden">Изменить минимальную цену</span>
                           </button>
                           <button class="range-toggle toggle-max">
-                            <span class="visually-hidden">Изменить максимальнуюцену</span>
+                            <span class="visually-hidden">Изменить максимальную цену</span>
                           </button>
                         </div>
                       </div>
@@ -160,12 +156,12 @@
             <b>Найдено гостиниц:</b>
             <span class="search-quantity">38</span>
           </div>
-          <select name="sorting-type">
-            <option class="select-option" value="cheap">Сначала дешёвые</option>
-            <option class="select-option" value="expensive">Сначала дорогие</option>
-            <option class="select-option" value="raiting-high">Сначала с высоким рейтингом</option>
-            <option class="select-option" value="raiting-low">Сначала с низким рейтингом</option>
-          </select>
+          <div class="select-wrapper">
+            <select class="select-control" name="sorting-type" >
+              <option class="select-option" value="cheap">Сначала дешёвые</option>
+              <option class="select-option" value="expensive">Сначала дорогие</option>
+            </select>
+          </div>
           <ul class="view-type">
             <li class="view-type-item active-view-type">
               <button class="view-type-button" type="button">
@@ -188,7 +184,7 @@
               </button>
             </li>
             <li class="view-type-item">
-              <button class="view-type-button" type="button">
+              <button class="view-type-button" type="button" >
                 <svg class="view-type-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
                   <path d="M2 0H0V2H2V0Z" fill="black"/>
                   <path d="M16 0H4V2H16V0Z" fill="black"/>
@@ -279,7 +275,7 @@
         <form class="subscribe-wrapper" action="https://echo.htmlacademy.ru">
           <label for="subscribe-button"></label>
           <input class="field email-input"  name="email" id="subscribe-button" type="email" placeholder="Ваш e-mail" required>
-          <span><button class="subscribe-button" type="submit">подписаться</button></span>
+          <span><button class="subscribe-button" type="submit" >подписаться</button></span>
         </form>
       </section>
     </main>
