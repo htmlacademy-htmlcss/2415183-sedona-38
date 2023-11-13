@@ -23,7 +23,8 @@
 img {
     max-width: 100%;
     height: auto;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 
 html {
@@ -38,7 +39,8 @@ html {
     border: 0;
     padding: 0;
     white-space: nowrap;
-    clip-path: inset(100%);
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
@@ -91,8 +93,44 @@ body {
 }
 
 
+input::-webkit-input-placeholder{
+    color: rgba(0, 0, 0, 0.3)
+}
+
+
+input::-moz-placeholder{
+    color: rgba(0, 0, 0, 0.3)
+}
+
+
+input:-ms-input-placeholder{
+    color: rgba(0, 0, 0, 0.3)
+}
+
+
+input::-ms-input-placeholder{
+    color: rgba(0, 0, 0, 0.3)
+}
+
+
 input::placeholder{
     color: rgba(0, 0, 0, 0.3)
+}
+
+input:disabled::-webkit-input-placeholder{
+    color: #ffffff
+}
+
+input:disabled::-moz-placeholder{
+    color: #ffffff
+}
+
+input:disabled:-ms-input-placeholder{
+    color: #ffffff
+}
+
+input:disabled::-ms-input-placeholder{
+    color: #ffffff
 }
 
 input:disabled::placeholder{
@@ -335,7 +373,8 @@ input:disabled::placeholder{
     position: relative;
     margin-bottom: -82px; /* компенсирует нижний паддинг блока героя, который рекомендовали на 6 лайве*/
     padding: 0;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 
@@ -364,14 +403,16 @@ input:disabled::placeholder{
     text-align:center;
     text-transform: uppercase;
     margin: 0 auto;
-    padding: 0 290px;
+    padding: 0 240px;
     margin-bottom: 25px;
 }
 
 .advantages-list{
     margin: 0 auto;
     padding: 0;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3, 1fr);
     list-style: none;
 }
@@ -403,7 +444,7 @@ input:disabled::placeholder{
     font-weight: 400;
     line-height: 21px;
     text-align: center;
-    margin: 0 auto;
+    margin: 0 -1px; /* без -1 пикселя фраза "Ехать в Седону из Лас-Вегаса совсем не скучно!"  (стока 79 индекса) некорректно преносится*/
 }
 .advantages-item-header::after {
     content: "";
@@ -442,7 +483,9 @@ input:disabled::placeholder{
     background-color: #82B3D3;
     width: 100%;
     min-height: 230px;
-    grid-column-start: 1;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-column-span: -2;
     grid-column-end: -1;
     margin: 0 auto;
 }
@@ -453,7 +496,8 @@ input:disabled::placeholder{
 }
 
 .with-picture img{
-object-fit: cover;
+-o-object-fit: cover;
+   object-fit: cover;
 }
 
 .with-picture h3{
@@ -503,7 +547,9 @@ color: #ffffff;
 }
 
 .invite-list{
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: (400px)[3];
     grid-template-columns: repeat(3, 400px);
     list-style: none;
     margin: 0 auto;
@@ -1201,7 +1247,8 @@ display: flex;
     padding: 0;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     right: 20px;
 }
 
@@ -1228,7 +1275,8 @@ display: flex;
     padding: 0;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     right: 19px;
 }
 
@@ -1238,7 +1286,8 @@ display: flex;
 .price-from::-webkit-inner-spin-button,
 .price-to::-webkit-outer-spin-button,
 .price-to::-webkit-inner-spin-button{
-    appearance: none;
+    -webkit-appearance: none;
+            appearance: none;
     margin: 0;
 }
 
@@ -1436,7 +1485,9 @@ background-color: rgba(255, 255, 255, 0.3);
     background-image: url("../images/decoration/select-arrow.svg");
     background-repeat: no-repeat;
     background-position: right 16px center;
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     margin: 0;
 }
 
@@ -1512,18 +1563,25 @@ background-color: rgba(255, 255, 255, 0.3);
     list-style: none;
     margin: 0;
     padding: 0;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     border: none;
 }
 
 .hotel-card{
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: auto 15px 1fr 15px auto 15px auto 15px auto;
     grid-template-rows: auto 1fr auto auto auto;
     min-width: 300px;
-    column-gap: 20px;
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
     row-gap: 15px;
     padding: 19px;
     padding-top: 17px;
@@ -1531,8 +1589,59 @@ background-color: rgba(255, 255, 255, 0.3);
     border: 1px solid #e6e6e6;
 }
 
+.hotel-card > *:nth-child(1){
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+
+.hotel-card > *:nth-child(2){
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+}
+
+.hotel-card > *:nth-child(3){
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+}
+
+.hotel-card > *:nth-child(4){
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+}
+
+.hotel-card > *:nth-child(5){
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+}
+
+.hotel-card > *:nth-child(6){
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+}
+
+.hotel-card > *:nth-child(7){
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+}
+
+.hotel-card > *:nth-child(8){
+    -ms-grid-row: 7;
+    -ms-grid-column: 3;
+}
+
+.hotel-card > *:nth-child(9){
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+}
+
+.hotel-card > *:nth-child(10){
+    -ms-grid-row: 9;
+    -ms-grid-column: 3;
+}
+
 .catalog-hotel-link{
     text-decoration: none;
+    -ms-grid-column-span: 2;
     grid-column: span 2;
     margin: 0;
     padding: 0;
@@ -1553,7 +1662,8 @@ background-color: rgba(255, 255, 255, 0.3);
     padding: 0;
     width: 100%;
     max-height: 300px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .hotel-name{
@@ -1594,7 +1704,8 @@ background-color: rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     width: 100%;
     box-sizing: border-box;
-    align-self: center;
+    -ms-grid-row-align: center;
+        align-self: center;
 }
 
 .more-button:hover{
@@ -1631,7 +1742,8 @@ background-color: rgba(255, 255, 255, 0.3);
     width: 100%;
     margin: 0;
     border-radius: 4px;
-    align-self: center;
+    -ms-grid-row-align: center;
+        align-self: center;
     box-sizing: border-box;
 }
 
@@ -1901,7 +2013,9 @@ background-color: rgba(255, 255, 255, 0.3);
 .form-wrapper{
     margin: 0;
     padding: 0;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-rows: 48px 0 48px 0 48px 0 48px 0 48px 0 108px;
     grid-template-rows: repeat(5, 48px) 108px;
     gap: 0;
     border: none;
@@ -1944,6 +2058,26 @@ background-color: rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
     margin-left: auto;
     font-weight: 700;
+}
+
+.check-in-date-input::-webkit-input-placeholder, .departure-date-input::-webkit-input-placeholder{
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.check-in-date-input::-moz-placeholder, .departure-date-input::-moz-placeholder{
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.check-in-date-input:-ms-input-placeholder, .departure-date-input:-ms-input-placeholder{
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.check-in-date-input::-ms-input-placeholder, .departure-date-input::-ms-input-placeholder{
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .check-in-date-input::placeholder,
@@ -1991,7 +2125,8 @@ background-color: rgba(255, 255, 255, 0.3);
     display: flex;
     margin: 0;
     padding: 0;
-    align-self: stretch;
+    -ms-grid-row-align: stretch;
+        align-self: stretch;
 }
 
 .modal-buttons{
@@ -2038,7 +2173,8 @@ background-color: rgba(255, 255, 255, 0.3);
 .adults-number::-webkit-inner-spin-button,
 .children-number::-webkit-outer-spin-button,
 .children-number::-webkit-inner-spin-button{
-    appearance: none;
+    -webkit-appearance: none;
+            appearance: none;
     margin: 0;
 }
 
@@ -2066,7 +2202,8 @@ background-color: rgba(255, 255, 255, 0.3);
     display: flex;
     margin: 0;
     padding: 0;
-    align-self: stretch;
+    -ms-grid-row-align: stretch;
+        align-self: stretch;
     margin-left: auto;
 }
 .children-wrapper{
@@ -2082,7 +2219,8 @@ background-color: rgba(255, 255, 255, 0.3);
 .children-tooltip{
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     left: 64px;
     display: block;
 }
@@ -2102,7 +2240,8 @@ background-color: rgba(255, 255, 255, 0.3);
     position: absolute;
     top: 161%;
     left:50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     z-index: 1;
     padding: 22px 20px;
     display: none;
@@ -2121,7 +2260,8 @@ background-color: rgba(255, 255, 255, 0.3);
     content: "";
     bottom:100%;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     z-index: 2;
 }
 
