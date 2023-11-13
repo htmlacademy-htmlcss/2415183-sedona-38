@@ -910,7 +910,7 @@ display: flex;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: top;
+    align-items: start;
 }
 
 .check-radio-wrapper{
@@ -1405,7 +1405,6 @@ background-color: rgba(255, 255, 255, 0.3);
     width: 292px;
     box-sizing: border-box;
     padding: 8px 14px;
-    padding-left: auto;
     font: inherit;
     font-weight: 700;
     background-color: #ffffff;
@@ -1980,6 +1979,10 @@ background-color: rgba(255, 255, 255, 0.3);
     background-position: center;
 }
 
+.minus-button,
+.plus-button{
+    color: transparent;
+}
 .minus-button{
     background-image: url("../images/decoration/minus.svg");
 }
