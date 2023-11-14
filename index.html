@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="images/favicon.png">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
     <title>HTML Academy: Седона</title>
   </head>
   <body class="page-container">
@@ -175,7 +176,7 @@
       </footer>
       <div class="modal-container modal-closed" data-test="modal">
         <div class="modal modal-hotel-search ">
-          <button class="modal-close-button">
+          <button class="modal-close-button" type="button">
             <span class="visually-hidden">Закрыть окно поиска.</span>
           </button>
           <section class="modal-content">
@@ -185,14 +186,14 @@
               <div class="form-wrapper">
                 <div class="check-in">
                     <label class="modal-lables check-in-date-label" for="check-in-date">Дата Заезда: </label>
-                    <input class="field check-in-date-input" type="text" name="дата заезда" id="check-in-date" placeholder="Укажите дату" value="">
+                    <input class="field check-in-date-input" type="text" name="дата заезда" id="check-in-date" placeholder="Укажите дату" value="27 апреля 2020">
                 </div>
                 <p class="warning incorrect-date">
                   Мы не можем отправить вас в прошлое.
                 </p>
                 <div class="departure">
                     <label class="modal-lables departure-date-label" for="departure-date">Дата Выезда:</label>
-                    <input class="field departure-date-input" type="text" name="дата выезда" id="departure-date" placeholder="Укажите дату" value="">
+                    <input class="field departure-date-input" type="text" name="дата выезда" id="departure-date" placeholder="Укажите дату" value="1 сентября 2023">
                 </div>
                   <p class="warning succesful-date">
                     На эти даты есть свободные номера. Пока есть.
